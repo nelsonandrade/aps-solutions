@@ -10,8 +10,13 @@
 
 <body>
 	<header>
-			<nav>
-				<ul>
+			<nav id="menu">
+				<div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div> 
+				<ul class="nav-list">
 					<li><a href="#banner">Home</a></li>
 					<li><a href="#sobre">Offres de solutions </a></li>
 					<li><a href="#exemplos">APP's </a></li>
@@ -19,6 +24,7 @@
 				</ul>
 			</nav>
 	</header>
+	<script src="mobile-menu.js"></script>
 	<section id="banner">
 		<figure  class="foto-legenda">
 				<img src="imagens/prog.jpg">
@@ -65,29 +71,25 @@
 
         <section id="contatos" class="flexivel">
         	<article class="contato">
-     <legend> Laissez votre contact! </legend>
+    			 <legend> Laissez votre contact! </legend>
+			    <form name="f_cadastro" action="./email.php" method="post">
+					<label for="" class="imagem"><img src="imagens/nome.png"></label>
+					<input type="text" name="nome" required="required" placeholder="écrire votre nom">
 
-      
-       	<form name="f_cadastro" action="./email.php" method="post">
-       	<label for="" class="imagem"><img src="imagens/nome.png"></label>
-       	<input type="text" name="nome" required="required" placeholder="écrire votre nom">
+					<label for=""><img src="imagens/Email.png"></label>
+					<input type="text" name="email" required="required" placeholder="écrire votre e-mail">
 
-       	<label for=""><img src="imagens/Email.png"></label>
-       	<input type="text" name="email" required="required" placeholder="écrire votre e-mail">
-
-       	<label for=""><img src="imagens/phone.png"></label>
-       	<input type="text" name="numero de telefone" required="required" placeholder="votre n° de telephone">
-       	 <div id="dv_btns"> 
-       	 			<input class="botao" type="submit" name="f_btn_enviar" value="Enregistrer">
-       	 			<input class="botao" type="reset" name="f_btn_limpar" value="Effacer"> 
-       	 			<input class="botao" type="button" name="f_btn_nada" value="Vide">      
-			</div>
-			
-			
-       	</form>
+					<label for=""><img src="imagens/phone.png"></label>
+					<input type="text" name="numero de telefone" required="required" placeholder="votre n° de telephone">
+					<div id="dv_btns"> 
+					<input class="botao" type="submit" name="f_btn_enviar" value="Enregistrer">
+					<input class="botao" type="reset" name="f_btn_limpar" value="Effacer"> 
+					<input class="botao" type="button" name="f_btn_nada" value="Vide">      
+					</div>
+				</form>
 
 
-			</article>
+	</article>
         </section>
 
 
@@ -96,7 +98,7 @@
 			<a href="https://www.facebook.com/nelson.andrade.395" target="_blank"><img src="imagens/faceb.png"></a>
 			<a href="https://www.instagram.com/nelson.andrade.395/" target="_blank"><img src="imagens/instra.png"></a>
 			<a href="https://www.twitter.com/Nelson38730519" target="_blank"><img src="imagens/twit.png"></a>
-			<a href="https://github.com/nelsonandrade" target="_blank"><img class="git"  src="imagens/github.png"></a><br>
+			<a href="https://github.com/nelsonandrade" target="_blank"><img class="git"  src="imagens/github1.png"></a><br>
 			<p>copyright &copy;2021 - Nelson Andrade</p>
 		</footer>
 	
