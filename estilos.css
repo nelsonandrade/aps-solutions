@@ -17,9 +17,13 @@ header{
 	padding: 15px 0px;
 	position: fixed;
 	width: 100%;
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.512);
 	z-index: 99999;
 
+}
+button{
+	width: 32px;
+	height: 32px;
 }
 	header nav ul{
 		list-style: none;
@@ -51,11 +55,7 @@ body{
 	background-image: url(imagens/fundo.jpg);
 
 }
-
-
-
 section{
-	
 	padding: 20px;
 }
 
@@ -259,7 +259,6 @@ ul#album-fotos li#foto04:hover {
 }
 
 article.geo img{
-	
 	width: 500px;
 	height:500px;
 	margin: 10px;
@@ -296,6 +295,7 @@ input:hover {
 
 form{
 	background-image: linear-gradient(200deg, rgba(107, 107, 107, 0.04) 0%, rgba(107, 107, 107, 0.04) 8%,rgba(31, 31, 31, 0.04) 8%, rgba(31, 31, 31, 0.04) 100%),linear-gradient(168deg, rgba(228, 228, 228, 0.04) 0%, rgba(228, 228, 228, 0.04) 62%,rgba(54, 54, 54, 0.04) 62%, rgba(54, 54, 54, 0.04) 100%),linear-gradient(283deg, rgba(18, 18, 18, 0.04) 0%, rgba(18, 18, 18, 0.04) 37%,rgba(233, 233, 233, 0.04) 37%, rgba(233, 233, 233, 0.04) 100%),linear-gradient(412deg, rgba(201, 201, 201, 0.04) 0%, rgba(201, 201, 201, 0.04) 55%,rgba(47, 47, 47, 0.04) 55%, rgba(47, 47, 47, 0.04) 100%),linear-gradient(429deg, rgba(172, 172, 172, 0.04) 0%, rgba(172, 172, 172, 0.04) 33%,rgba(26, 26, 26, 0.04) 33%, rgba(26, 26, 26, 0.04) 100%),linear-gradient(223deg, rgba(11, 11, 11, 0.04) 0%, rgba(11, 11, 11, 0.04) 38%,rgba(87, 87, 87, 0.04) 38%, rgba(87, 87, 87, 0.04) 100%),linear-gradient(506deg, rgba(199, 199, 199, 0.04) 0%, rgba(199, 199, 199, 0.04) 69%,rgba(4, 4, 4, 0.04) 69%, rgba(4, 4, 4, 0.04) 100%),linear-gradient(472deg, rgba(36, 36, 36, 0.04) 0%, rgba(36, 36, 36, 0.04) 20%,rgba(91, 91, 91, 0.04) 20%, rgba(91, 91, 91, 0.04) 100%),linear-gradient(249deg, rgb(10, 17, 72),rgb(35, 148, 228));
+	
 	width: 500px;
 	margin-left: 635px;
 	border:3px solid rgb(0, 0, 0);
@@ -344,6 +344,55 @@ form{
   
 #dv_btns:hover::before{
 	width: 100%;
+  }
+  @media (max-width: 960px){
+	article.txtsobre{
+		margin-top: 20px;
+		width: auto;
+	}
+	 article.txtsobre h3{
+		text-align: center;
+		font-weight: bolder;
+		font-size: 25px;
+		color: #fababa;
+		text-decoration: unset;
+   }
+	 article.txtsobre h2{
+		text-align: center;
+		font-size: 30px;
+		font-weight: bolder;
+		color: rgb(241, 227, 227);
+	}
+	article.txtsobre p{
+		font-size: 16px;
+		padding-top: 20px;
+		
+	}
+	.flexivel{
+		display: block;
+	}
+	#exemplos {
+		display: block;
+	}
+	#exemplos h1{
+		font-size: 25px;
+	}
+	legend{
+		font-size: 30px;
+		font-weight: bold;
+	}
+  }
+  @media (max-width: 486px){
+	article.geo img{
+		width: 300px;
+		height:300px;
+	}
+	#contatos{
+		display: none;
+	}
+	footer img{
+		width: 50px;
+	}
   }
 
 footer p{
