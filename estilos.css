@@ -13,29 +13,31 @@ html{
 }
 
 header{
-	max-width: 100%;
-	padding: 15px 0px;
-	position: fixed;
 	width: 100%;
+	padding: 15px 0px;
+	display: flex;
+	position: fixed;
 	background-color: rgba(255, 255, 255, 0.512);
 	z-index: 99999;
-
 }
-
-#menu .nav-list ul {
-   
-    display: flex;
+#menu .logo img{
+	width: 50px;
+	display: flex;
 }
 
 .nav-list li {
-   letter-spacing: 2px;
-   margin-left: 25px;
+	list-style: none;
+	float: left;
+   	letter-spacing: 2px;
+  	margin-left: 25px;
 }
  .nav-list li a{
      color: black;
-	 list-style: none;
      text-decoration: none;
+	 font-family: Arial, Helvetica, sans-serif;
      font-weight: bold;
+	 padding-left: 10px;
+	 padding-bottom: 5px;
      font-size: 20px;
      transition: 0.5s;
     }
@@ -268,14 +270,14 @@ ul#album-fotos li#foto04:hover {
 }
 
 article.geo img{
-	width: 500px;
-	height:500px;
+	max-width: 500px;
+	max-height:500px;
 	margin: 10px;
 	border: 5px solid #ffffff;
 	background-color: #ffffff;
 	box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+} 
 
-}
 
 article.contato legend{
 	color: black;
@@ -305,14 +307,12 @@ input:hover {
 form{
 	background-image: linear-gradient(200deg, rgba(107, 107, 107, 0.04) 0%, rgba(107, 107, 107, 0.04) 8%,rgba(31, 31, 31, 0.04) 8%, rgba(31, 31, 31, 0.04) 100%),linear-gradient(168deg, rgba(228, 228, 228, 0.04) 0%, rgba(228, 228, 228, 0.04) 62%,rgba(54, 54, 54, 0.04) 62%, rgba(54, 54, 54, 0.04) 100%),linear-gradient(283deg, rgba(18, 18, 18, 0.04) 0%, rgba(18, 18, 18, 0.04) 37%,rgba(233, 233, 233, 0.04) 37%, rgba(233, 233, 233, 0.04) 100%),linear-gradient(412deg, rgba(201, 201, 201, 0.04) 0%, rgba(201, 201, 201, 0.04) 55%,rgba(47, 47, 47, 0.04) 55%, rgba(47, 47, 47, 0.04) 100%),linear-gradient(429deg, rgba(172, 172, 172, 0.04) 0%, rgba(172, 172, 172, 0.04) 33%,rgba(26, 26, 26, 0.04) 33%, rgba(26, 26, 26, 0.04) 100%),linear-gradient(223deg, rgba(11, 11, 11, 0.04) 0%, rgba(11, 11, 11, 0.04) 38%,rgba(87, 87, 87, 0.04) 38%, rgba(87, 87, 87, 0.04) 100%),linear-gradient(506deg, rgba(199, 199, 199, 0.04) 0%, rgba(199, 199, 199, 0.04) 69%,rgba(4, 4, 4, 0.04) 69%, rgba(4, 4, 4, 0.04) 100%),linear-gradient(472deg, rgba(36, 36, 36, 0.04) 0%, rgba(36, 36, 36, 0.04) 20%,rgba(91, 91, 91, 0.04) 20%, rgba(91, 91, 91, 0.04) 100%),linear-gradient(249deg, rgb(10, 17, 72),rgb(35, 148, 228));
 	
-	width: 500px;
+	max-width: 500px;
 	margin-left: 635px;
 	border:3px solid rgb(0, 0, 0);
 	padding: 15px;
 	border-radius: 15px;
-	font-weight: bolder;
-	
-	
+	font-weight: bolder;	
 }
 
 #dv_btns{
@@ -354,7 +354,7 @@ form{
 #dv_btns:hover::before{
 	width: 100%;
   }
-  @media (max-width: 960px){
+  @media (max-width: 1200px){
 	
 	.mobile-menu{
 		display: block;
@@ -367,6 +367,7 @@ form{
 		width: 50vw;
 		height: 92vh;
 		background:rgba(119, 136, 153, 0.716);
+		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
@@ -422,7 +423,16 @@ form{
 	article.txtsobre p{
 		font-size: 16px;
 		padding-top: 20px;
-		
+	}
+	.geo{
+		margin-left: 190px;
+	}
+	.geo h1{
+		color:white;
+		width: 500px;
+		margin-left: 5px;
+		font-weight: bold;
+		font-family:Arial, Helvetica, sans-serif;
 	}
 	.flexivel{
 		display: block;
@@ -440,8 +450,119 @@ form{
 	legend{
 		display: none;
 	}
+	form{
+		margin-left: 200px;
+	}
   }
-  @media (max-width: 486px){
+  @media (max-width: 960px){
+	
+	.mobile-menu{
+		display: block;
+		z-index: 5;
+	}
+	.nav-list{
+		position: absolute;
+		top: 8vh;
+		right:0;
+		width: 50vw;
+		height: 92vh;
+		background:rgba(119, 136, 153, 0.716);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		transform: translateX(100%);
+		transition: transform .3s ease-in;
+		z-index: 1;
+	}
+	.nav-list li{
+		margin-left:0 ;
+		opacity: 0;
+	}
+	
+	.nav-list.active {
+		transform: translateX(0);
+	}
+	
+	@keyframes navLinkFade {
+		from{
+			opacity: 0;
+			transform: translateX(50px);
+		}
+		to{
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+	.mobile-menu.active .line1{
+		transform: rotate(-45deg) translate(-10px,8px);
+	}
+	.mobile-menu.active .line2{
+		opacity: 0;
+	}
+	.mobile-menu.active .line3{
+		transform: rotate(45deg) translate(-10px,-8px); 
+	} 
+	article.txtsobre{
+		margin-top: 20px;
+		width: auto;
+	}
+	 article.txtsobre h3{
+		text-align: center;
+		font-weight: bolder;
+		font-size: 25px;
+		color: #fababa;
+		text-decoration: unset;
+   }
+	 article.txtsobre h2{
+		text-align: center;
+		font-size: 30px;
+		font-weight: bolder;
+		color: rgb(241, 227, 227);
+	}
+	article.txtsobre p{
+		font-size: 16px;
+		padding-top: 20px;
+	}
+	.geo h1{
+		color:white;
+		width: 500px;
+		font-weight: bold;
+		font-family:Arial, Helvetica, sans-serif;
+	}
+	.flexivel{
+		display: block;
+	}
+	#exemplos {
+		display: block;
+	}
+	#exemplos h1{
+		font-size: 25px;
+	}
+	legend{
+		font-size: 30px;
+		font-weight: bold;
+	}
+	legend{
+		display: none;
+	}
+	form{
+		margin-left: 200px;
+	}
+  }
+  @media (max-width:750px ){
+	.geo {
+		margin-left: 50px;
+	}
+	.contato{
+		margin-left: 0px;
+		width: 500px;
+	}
+	form{
+		margin: 0px;
+	}
+  }
+  @media (max-width: 500px){
 	.mobile-menu{
 		display: block;
 		z-index: 5;
@@ -488,12 +609,15 @@ form{
 	.mobile-menu.active .line3{
 		transform: rotate(45deg) translate(-10px,-8px); 
 	}
+	.geo {
+		margin-left: 10px;
+	}
 	article.geo img{
 		width: 300px;
 		height:300px;
 	}
 	#contatos{
-		display: none;
+		display: block;
 	}
 	legend{
 		display: none;
